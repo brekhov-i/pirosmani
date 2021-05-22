@@ -1,0 +1,116 @@
+@import "../../assets/scss/functions";
+@import "../../assets/scss/mixins";
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #00ac4e;
+  padding: vw(34) 0;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+  }
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+  }
+  &__phones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: vw(25);
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: vw(16);
+    line-height: vw(17);
+    color: #ffffff;
+    strong {
+      font-weight: 400;
+      font-size: vw(22);
+      line-height: vw(24);
+      margin-top: vw(10);
+    }
+    &:not(:last-child) {
+      margin-right: vw(60);
+    }
+  }
+  &__times {
+    font-size: vw(16);
+    line-height: vw(18);
+    color: #ffffff;
+    margin-bottom: vw(10);
+  }
+  &__email {
+    font-size: vw(18);
+    line-height: vw(20);
+    color: #ffffff;
+    margin-bottom: vw(10);
+  }
+  &__support {
+    font-size: vw(18);
+    line-height: vw(22);
+    text-decoration-line: underline;
+    color: #ffffff;
+    margin-bottom: vw(10);
+  }
+  &__copy,
+  &__soglacy,
+  &__policy {
+    font-size: vw(13);
+    line-height: vw(14);
+    color: #ffffff;
+  }
+  &__copy,
+  &__soglacy {
+    margin-right: vw(15);
+  }
+  &__vk,
+  &__inst {
+    font-size: vw(16);
+    line-height: vw(18);
+    letter-spacing: vw(3);
+    font-variant: small-caps;
+    color: #ffffff;
+  }
+  &__vk {
+    margin-bottom: vw(25);
+  }
+  &__login {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    svg {
+      width: vw(24);
+      height: vw(24);
+      margin-right: vw(10);
+    }
+    button,
+    span {
+      font-size: vw(16);
+      line-height: vw(17);
+      color: #ffffff;
+    }
+    span {
+      margin: 0 vw(5);
+    }
+  }
+}

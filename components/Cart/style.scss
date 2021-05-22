@@ -1,0 +1,115 @@
+@import "../../assets/scss/functions";
+@import "../../assets/scss/mixins";
+
+.cart {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: vw(10);
+    img {
+      border-radius: vw(5);
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: vw(18);
+    line-height: vw(20);
+    color: #000000;
+    margin-bottom: vw(10);
+  }
+  &__description {
+    font-size: vw(15);
+    line-height: vw(18);
+    color: #000000;
+    margin-bottom: vw(13);
+    //max-height: vw(100);
+  }
+  &__rating {
+    margin-bottom: vw(10);
+  }
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: vw(12);
+  }
+  &__price {
+    font-weight: 500;
+    font-size: vw(18);
+    line-height: vw(20);
+    color: #000000;
+    margin-right: vw(10);
+  }
+  &__weigth {
+    font-size: vw(15);
+    line-height: vw(18);
+    color: #828282;
+  }
+  &__btn {
+    width: vw(140);
+    height: vw(38);
+    background: #00ac4e;
+    border-radius: vw(5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: vw(18);
+    line-height: vw(20);
+    color: #ffffff;
+  }
+  &__busketBtns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  &__counts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: vw(150);
+    height: vw(50);
+    border-radius: vw(5);
+    border: vw(1) solid #ebebeb;
+    background: #fcfcfc;
+    margin-right: auto;
+    button {
+      height: 100%;
+      flex-grow: 1;
+      font-size: vw(20);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span {
+      width: vw(20);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__addBtn {
+    width: vw(50);
+    height: vw(50);
+    background-color: #00ac4e;
+    border-radius: vw(5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: vw(20);
+      height: vw(20);
+      fill: #ffffff;
+    }
+  }
+}

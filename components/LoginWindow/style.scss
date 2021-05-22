@@ -1,0 +1,180 @@
+@import "../../assets/scss/functions";
+@import "../../assets/scss/mixins";
+
+.modalWindow {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(#000, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease-in-out;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s all ease-in-out;
+  }
+  &__close{
+    position: absolute;
+    top: vw(10);
+    right: vw(15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: vw(30);
+    height: vw(30);
+    span {
+      width: vw(20);
+      height: vw(2);
+      display: inline-block;
+      background-color: #00ac4e;
+      &:first-child {
+        transform: rotate(45deg) translateX(vw(2)) translateY(vw(0));
+      }
+      &:last-child {
+        transform: rotate(-45deg) translateX(vw(1)) translateY(vw(0));
+      }
+    }
+  }
+  &__icon {
+    fill: #C6C6C6;
+    margin-bottom: vw(15);
+  }
+  &__title {
+    font-weight: 500;
+    font-size: vw(20);
+    line-height: vw(22);
+    color: #000000;
+    margin-bottom: vw(25);
+  }
+  &__wrapper{
+    position: relative;
+    width: vw(384);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px vw(18) rgba(0, 0, 0, 0.12);
+    border-radius: vw(18);
+    padding: vw(30) vw(47) vw(25);
+    .form{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: vw(25);
+        &:last-child {
+          margin-bottom: vw(13);
+        }
+        &.form-group__checkbox {
+          width: 100%;
+          label {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            input[type="checkbox"] {
+              display: none;
+            }
+            input[type="checkbox"]:checked ~ .checkbox {
+              background-color: #00AC4E;
+              border: vw(2) solid #FCFCFC;
+            }
+            .checkbox {
+              min-width: vw(15);
+              min-height: vw(15);
+              border-radius: 100%;
+              background: #FCFCFC;
+              border: vw(2) solid #EBEBEB;
+              margin-right: vw(10);
+            }
+            p {
+              font-size: vw(12);
+              line-height: vw(12);
+              color: #C6C6C6;
+              a {
+                color: #00AC4E;
+              }
+            }
+            &.error {
+              .checkbox {
+                border-color: red;
+              }
+              p {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+      &__input{
+        width: 100%;
+        height: vw(50);
+        margin-bottom: vw(5);
+        background-color: #FCFCFC;
+        border: vw(1) solid #EBEBEB;
+        border-radius: vw(6);
+        font-size: vw(14);
+        padding: vw(19) 0 vw(19) vw(18);
+        &::placeholder {
+          font-size: vw(14);
+          line-height: vw(15);
+          color: #C6C6C6;
+        }
+        &--error{
+          border-color: red;
+          color: red;
+          &::placeholder {
+            color: red;
+          }
+        }
+      }
+      &__error{
+        color: red;
+      }
+      &__forgotPass {
+        font-size: vw(15);
+        line-height: vw(17);
+        text-decoration: underline;
+        color: #00AC4E;
+        margin-bottom: vw(12);
+      }
+      &__submit {
+        background-color: #00AC4E;
+        border-radius: vw(6);
+        color: #ffffff;
+        font-size: vw(15);
+        line-height: vw(17);
+        padding: vw(14) vw(30);
+        &.login-submit {
+          padding: vw(14) vw(50);
+          margin-bottom: vw(20);
+        }
+      }
+      &__text {
+        font-size: vw(14);
+        line-height: vw(15);
+        button{
+          font-size: vw(15);
+          color: #00AC4E;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
